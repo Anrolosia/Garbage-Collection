@@ -1,4 +1,5 @@
 """Sensor platform for garbage_collection."""
+
 from __future__ import annotations
 
 import logging
@@ -21,7 +22,6 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.restore_state import RestoreEntity
 
 from . import const, helpers
-from .calendar import EntitiesCalendarData
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -128,7 +128,7 @@ class GarbageCollection(RestoreEntity):
         self._last_updated: datetime | None = None
         self.last_collection: datetime | None = None
         self._days: int | None = None
-        self._attr_state = "" if bool(self._verbose_state) else 2
+        self._attr_state: str | int | None = "" if bool(self._verbose_state) else 2
         self._attr_icon = self._icon_normal
 
     async def async_added_to_hass(self) -> None:
@@ -166,17 +166,8 @@ class GarbageCollection(RestoreEntity):
             manufacturer="bruxy70",
         )
 
-        # Create or add to calendar
+        # Add to calendar (created and forwarded in async_setup_entry)
         if not self.hidden:
-            if const.CALENDAR_PLATFORM not in self.hass.data[const.DOMAIN]:
-                self.hass.data[const.DOMAIN][
-                    const.CALENDAR_PLATFORM
-                ] = EntitiesCalendarData(self.hass)
-                _LOGGER.debug("Creating garbage_collection calendar")
-                await self.hass.config_entries.async_forward_entry_setup(
-                    self.config_entry, const.CALENDAR_PLATFORM
-                )
-
             self.hass.data[const.DOMAIN][const.CALENDAR_PLATFORM].add_entity(
                 self.entity_id
             )
@@ -247,11 +238,13 @@ class GarbageCollection(RestoreEntity):
             const.ATTR_DAYS: self._days,
             const.ATTR_LAST_COLLECTION: self.last_collection,
             const.ATTR_LAST_UPDATED: self._last_updated,
-            const.ATTR_NEXT_DATE: None
-            if self._next_date is None
-            else datetime(
-                self._next_date.year, self._next_date.month, self._next_date.day
-            ).astimezone(),
+            const.ATTR_NEXT_DATE: (
+                None
+                if self._next_date is None
+                else datetime(
+                    self._next_date.year, self._next_date.month, self._next_date.day
+                ).astimezone()
+            ),
             # Needed for translations to work
             ATTR_DEVICE_CLASS: self.DEVICE_CLASS,
         }

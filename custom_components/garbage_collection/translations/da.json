@@ -3,7 +3,7 @@
         "step": {
             "user": {
                 "title": "Garbage Collection - Afhentningsfrekvens (1/2)",
-                "description": "Angiv navnet på sensoren og konfigurer sensorparametre. For mere info se: https://github.com/bruxy70/Garbage-Collection",
+                "description": "Angiv navnet på sensoren og konfigurer sensorparametre. For mere info se: {docs_url}",
                 "data": {
                     "name": "Visningsnavn",
                     "hidden": "Skjul i kalender",
@@ -18,7 +18,7 @@
             },
             "detail": {
                 "title": "Garbage Collection - Yderligere parametre (2/2)",
-                "description": "For mere info se: https://github.com/bruxy70/Garbage-Collection",
+                "description": "For mere info se: {docs_url}",
                 "data": {
                     "date": "Dato (mm/dd)",
                     "entities": "Liste af enheder (kommasepareret)",
@@ -31,7 +31,7 @@
                     "weekday_order_number": "Specifikke ugedage i måneden (fx første onsdag i måneden)",
                     "force_week_order_numbers": "Brug specifik uge i måneden i stedet for specifik ugedag (fx onsdag i første uge i måneden)",
                     "verbose_format": "Verbost format (anvend `date` og `days` variablerne (i tuborgklammer))",
-                    "date_format": "Datoformat (se http://strftime.org/)"
+                    "date_format": "Datoformat (se strftime)"
                 }
             }
         },
@@ -56,7 +56,7 @@
         "step": {
             "init": {
                 "title": "Garbage Collection - Afhentningsfrekvens (1/2)",
-                "description": "Ændr sensorparametre. More info on https://github.com/bruxy70/Garbage-Collection",
+                "description": "Ændr sensorparametre. More info on {docs_url}",
                 "data": {
                     "hidden": "Skjul i kalender",
                     "frequency": "Frekvens",
@@ -70,7 +70,7 @@
             },
             "detail": {
                 "title": "Garbage Collection - Yderligere parametre (2/2)",
-                "description": "For mere info se: https://github.com/bruxy70/Garbage-Collection",
+                "description": "For mere info se: {docs_url}",
                 "data": {
                     "date": "Dato (mm/dd)",
                     "entities": "Liste af enheder (kommasepareret)",
@@ -83,7 +83,7 @@
                     "weekday_order_number": "Specifikke ugedage i måneden (fx første onsdag i måneden)",
                     "force_week_order_numbers": "Brug specifik uge i måneden i stedet for specifik ugedag (fx onsdag i første uge i måneden)",
                     "verbose_format": "Verbost format (anvend `date` og `days` variablerne (i tuborgklammer))",
-                    "date_format": "Datoformat (se http://strftime.org/)"
+                    "date_format": "Datoformat (se strftime)"
                 }
             }
         },

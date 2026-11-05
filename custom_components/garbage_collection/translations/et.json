@@ -3,7 +3,7 @@
         "step": {
             "user": {
                 "title": "Prügivedu - tühjendamiste ajad (1/2)",
-                "description": "Sisesta nduri andmed. Rohkem infot leiab https://github.com/bruxy70/Garbage-Collection",
+                "description": "Sisesta nduri andmed. Rohkem infot leiab {docs_url}",
                 "data": {
                     "name": "Kuvatav nimi",
                     "hidden": "Ära näita kalendris",
@@ -18,7 +18,7 @@
             },
             "detail": {
                 "title": "Prügivedu - täiendavad sätted (2/2)",
-                "description": "Vali üks või mitu tühjendamise nädalapäeva. Rohkem teavet: https://github.com/bruxy70/Garbage-Collection",
+                "description": "Vali üks või mitu tühjendamise nädalapäeva. Rohkem teavet: {docs_url}",
                 "data": {
                     "date": "Kuupäev (mm/dd)",
                     "entities": "Olemite nimekiri (komadega eraldatud)",
@@ -31,7 +31,7 @@
                     "weekday_order_number": "Kuu nädalapäevade järjekord (nt kuu esimene kolmapäev)",
                     "force_week_order_numbers": "nädala järjekord kuus, mitte nädalapäevade järjekord (nt esimese nädala kolmapäeval).",
                     "verbose_format": "Teavituse formaat (kasutades `date` and `days` muutujaid (kantsulgudes))",
-                    "date_format": "Kuupäeva formaat (vaata http://strftime.org/)"
+                    "date_format": "Kuupäeva formaat (vaata strftime)"
                 }
             }
         },
@@ -56,7 +56,7 @@
         "step": {
             "init": {
                 "title": "Prügivedu - tühjendamiste ajad (1/2)",
-                "description": "Sisesta nduri andmed. Rohkem infot leiab https://github.com/bruxy70/Garbage-Collection",
+                "description": "Sisesta nduri andmed. Rohkem infot leiab {docs_url}",
                 "data": {
                     "hidden": "Ära näita kalendris",
                     "frequency": "Sagedus",
@@ -70,7 +70,7 @@
             },
             "detail": {
                 "title": "Prügivedu - täiendavad sätted (2/2)",
-                "description": "Vali üks või mitu tühjendamise nädalapäeva. Rohkem teavet: https://github.com/bruxy70/Garbage-Collection",
+                "description": "Vali üks või mitu tühjendamise nädalapäeva. Rohkem teavet: {docs_url}",
                 "data": {
                     "date": "Kuupäev (mm/dd)",
                     "entities": "Olemite nimekiri (komadega eraldatud)",
@@ -83,7 +83,7 @@
                     "weekday_order_number": "Kuu nädalapäevade järjekord (nt kuu esimene kolmapäev)",
                     "force_week_order_numbers": "nädala järjekord kuus, mitte nädalapäevade järjekord (nt esimese nädala kolmapäeval).",
                     "verbose_format": "Teavituse formaat (kasutades `date` and `days` muutujaid (kantsulgudes))",
-                    "date_format": "Kuupäeva formaat (vaata http://strftime.org/)"
+                    "date_format": "Kuupäeva formaat (vaata strftime)"
                 }
             }
         },

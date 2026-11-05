@@ -1,4 +1,5 @@
 """Adds config flow for GarbageCollection."""
+
 from __future__ import annotations
 
 import logging
@@ -130,28 +131,28 @@ async def detail_config_schema(
     options_schema: Dict[vol.Optional | vol.Required, Any] = {}
     if handler.options[const.CONF_FREQUENCY] in const.ANNUAL_FREQUENCY:
         # "annual"
-        options_schema[
-            required(const.CONF_DATE, handler.options)
-        ] = selector.TextSelector()
+        options_schema[required(const.CONF_DATE, handler.options)] = (
+            selector.TextSelector()
+        )
     elif handler.options[const.CONF_FREQUENCY] in const.GROUP_FREQUENCY:
         # "group"
-        options_schema[
-            required(CONF_ENTITIES, handler.options)
-        ] = selector.EntitySelector(
-            selector.EntitySelectorConfig(
-                domain="sensor", integration=const.DOMAIN, multiple=True
-            ),
+        options_schema[required(CONF_ENTITIES, handler.options)] = (
+            selector.EntitySelector(
+                selector.EntitySelectorConfig(
+                    domain="sensor", integration=const.DOMAIN, multiple=True
+                ),
+            )
         )
     elif handler.options[const.CONF_FREQUENCY] not in const.BLANK_FREQUENCY:
         # everything else except "blank" and every-n-days
         if handler.options[const.CONF_FREQUENCY] not in const.DAILY_FREQUENCY:
-            options_schema[
-                required(const.CONF_COLLECTION_DAYS, handler.options)
-            ] = selector.SelectSelector(
-                selector.SelectSelectorConfig(
-                    options=const.WEEKDAY_OPTIONS,
-                    multiple=True,
-                    mode=selector.SelectSelectorMode.LIST,
+            options_schema[required(const.CONF_COLLECTION_DAYS, handler.options)] = (
+                selector.SelectSelector(
+                    selector.SelectSelectorConfig(
+                        options=const.WEEKDAY_OPTIONS,
+                        multiple=True,
+                        mode=selector.SelectSelectorMode.LIST,
+                    )
                 )
             )
         # everything else except "blank"
@@ -176,20 +177,20 @@ async def detail_config_schema(
                     mode=selector.SelectSelectorMode.LIST,
                 )
             )
-            options_schema[
-                optional(const.CONF_FORCE_WEEK_NUMBERS, handler.options)
-            ] = selector.BooleanSelector()
+            options_schema[optional(const.CONF_FORCE_WEEK_NUMBERS, handler.options)] = (
+                selector.BooleanSelector()
+            )
         if handler.options[const.CONF_FREQUENCY] in const.WEEKLY_DAILY_MONTHLY:
             # "every-n-weeks", "every-n-days", "monthly"
             uom = {"every-n-weeks": "weeks", "every-n-days": "days", "monthly": "month"}
-            options_schema[
-                required(const.CONF_PERIOD, handler.options)
-            ] = selector.NumberSelector(
-                selector.NumberSelectorConfig(
-                    min=1,
-                    max=1000,
-                    mode=selector.NumberSelectorMode.BOX,
-                    unit_of_measurement=uom[handler.options[const.CONF_FREQUENCY]],
+            options_schema[required(const.CONF_PERIOD, handler.options)] = (
+                selector.NumberSelector(
+                    selector.NumberSelectorConfig(
+                        min=1,
+                        max=1000,
+                        mode=selector.NumberSelectorMode.BOX,
+                        unit_of_measurement=uom[handler.options[const.CONF_FREQUENCY]],
+                    )
                 )
             )
         if handler.options[const.CONF_FREQUENCY] in const.WEEKLY_FREQUENCY_X:
@@ -229,16 +230,33 @@ async def choose_details_step(_: dict[str, Any]) -> str:
     return "detail"
 
 
+async def _placeholders(_: Any) -> dict[str, str]:
+    """Return the URLs the translations refer to."""
+    return {"docs_url": "https://github.com/Anrolosia/Garbage-Collection"}
+
+
 CONFIG_FLOW: Dict[str, SchemaFlowFormStep | SchemaFlowMenuStep] = {
-    "user": SchemaFlowFormStep(general_config_schema, next_step=choose_details_step),
+    "user": SchemaFlowFormStep(
+        general_config_schema,
+        next_step=choose_details_step,
+        description_placeholders=_placeholders,
+    ),
     "detail": SchemaFlowFormStep(
-        detail_config_schema, validate_user_input=_validate_config
+        detail_config_schema,
+        validate_user_input=_validate_config,
+        description_placeholders=_placeholders,
     ),
 }
 OPTIONS_FLOW: Dict[str, SchemaFlowFormStep | SchemaFlowMenuStep] = {
-    "init": SchemaFlowFormStep(general_options_schema, next_step=choose_details_step),
+    "init": SchemaFlowFormStep(
+        general_options_schema,
+        next_step=choose_details_step,
+        description_placeholders=_placeholders,
+    ),
     "detail": SchemaFlowFormStep(
-        detail_config_schema, validate_user_input=_validate_config
+        detail_config_schema,
+        validate_user_input=_validate_config,
+        description_placeholders=_placeholders,
     ),
 }
 

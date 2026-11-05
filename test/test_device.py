@@ -1,4 +1,5 @@
 """Test all frequencies (except blank)."""
+
 import pytest
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers import device_registry as dr
@@ -22,8 +23,8 @@ async def test_device(hass: HomeAssistant) -> None:
     await hass.config_entries.async_setup(config_entry.entry_id)
     await hass.async_block_till_done()
     device_registry = dr.async_get(hass)
-    device = device_registry.async_get_device(
-        identifiers={(const.DOMAIN, config_entry.entry_id)}
+    device = device_registry.async_get_device_by_identifier(
+        (const.DOMAIN, config_entry.entry_id), config_entry.entry_id
     )
     assert device is not None
     assert device.manufacturer == "bruxy70"

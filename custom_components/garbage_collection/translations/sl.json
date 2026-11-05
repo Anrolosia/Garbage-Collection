@@ -3,7 +3,7 @@
         "step": {
             "user": {
                 "title": "Odvoz odpadkov - Pogostost odvoza",
-                "description": "Vpišite ime senzorja in nastavite parametre. Več informacij na https://github.com/bruxy70/Garbage-Collection",
+                "description": "Vpišite ime senzorja in nastavite parametre. Več informacij na {docs_url}",
                 "data": {
                     "name": "Prijazno ime",
                     "hidden": "Skrij v koledarju",
@@ -18,7 +18,7 @@
                     "verbose_format": "Verbose format (uporaba spremenljivk `datum` in `dni` (v oglatih oklepajih))",
                     "include_dates": "Vključi datume (yyyy-mm-dd, yyyy-mm-dd, ...) - opcijsko",
                     "exclude_dates": "Izključi datume (yyyy-mm-dd, yyyy-mm-dd, ...) - opcijsko",
-                    "date_format": "Format datuma (glej http://strftime.org/)"
+                    "date_format": "Format datuma (glej strftime)"
                 }
             },
             "annual_group": {
@@ -31,7 +31,7 @@
             },
             "detail": {
                 "title": "Odvoz odpadkov - Collection days",
-                "description": "Izberite enega ali več dni odvoza. Več podrobnosti tukaj: https://github.com/bruxy70/Garbage-Collection",
+                "description": "Izberite enega ali več dni odvoza. Več podrobnosti tukaj: {docs_url}",
                 "data": {
                     "collection_days_mon": "Ponedeljek",
                     "collection_days_tue": "Torek",
@@ -45,7 +45,7 @@
             },
             "final": {
                 "title": "Odvoz odpadkov - Dodatni parametri",
-                "description": "Vključeni in izključeni datumi so seznami datumov, ločeni z vejico v formatu yyyy-mm-dd. Podrobnosti na https://github.com/bruxy70/Garbage-Collection",
+                "description": "Vključeni in izključeni datumi so seznami datumov, ločeni z vejico v formatu yyyy-mm-dd. Podrobnosti na {docs_url}",
                 "data": {
                     "first_month": "Prvi mesec odvoza",
                     "last_month": "Zadnji mesec odvoza",
@@ -93,7 +93,7 @@
         "step": {
             "init": {
                 "title": "Odvoz odpadkov - Pogostost odvoza",
-                "description": "Spremenite parametre. Več informacij: https://github.com/bruxy70/Garbage-Collection",
+                "description": "Spremenite parametre. Več informacij: {docs_url}",
                 "data": {
                     "hidden": "Skrij v koledarju",
                     "frequency": "Pogostost",
@@ -107,7 +107,7 @@
                     "verbose_format": "Verbose format (uporaba spremenljivk `datum` in `dni` (v oglatih oklepajih))",
                     "include_dates": "Vključi datume (yyyy-mm-dd, yyyy-mm-dd, ...) - opcijsko",
                     "exclude_dates": "Izključi datume (yyyy-mm-dd, yyyy-mm-dd, ...) - opcijsko",
-                    "date_format": "Format datume (glej http://strftime.org/)"
+                    "date_format": "Format datume (glej strftime)"
                 }
             },
             "annual_group": {
@@ -120,7 +120,7 @@
             },
             "detail": {
                 "title": "Odvoz odpadkov - Collection days",
-                "description": "Izberite enega ali več dni odvoza. Več informacij tukaj: https://github.com/bruxy70/Garbage-Collection",
+                "description": "Izberite enega ali več dni odvoza. Več informacij tukaj: {docs_url}",
                 "data": {
                     "collection_days_mon": "Ponedeljek",
                     "collection_days_tue": "Torek",
@@ -134,7 +134,7 @@
             },
             "final": {
                 "title": "Odvoz odpadkov - Dodatni parametri",
-                "description": "Vključeni in izključeni datumi so seznami datumov, ločeni z vejico v formatu yyyy-mm-dd. Podrobnosti na https://github.com/bruxy70/Garbage-Collection",
+                "description": "Vključeni in izključeni datumi so seznami datumov, ločeni z vejico v formatu yyyy-mm-dd. Podrobnosti na {docs_url}",
                 "data": {
                     "first_month": "Prvi mesec odvoza",
                     "last_month": "Zdnji mesec odvoza",

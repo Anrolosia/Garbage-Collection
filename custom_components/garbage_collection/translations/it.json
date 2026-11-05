@@ -3,7 +3,7 @@
         "step": {
             "user": {
                 "title": "Raccolta Differenziata - Frequenza di raccolta (1/2)",
-                "description": "Immetti il nome del sensore e configura i suoi parametri. Maggiori informazioni su https://github.com/bruxy70/Garbage-Collection",
+                "description": "Immetti il nome del sensore e configura i suoi parametri. Maggiori informazioni su {docs_url}",
                 "data": {
                     "name": "Nome personalizzato",
                     "hidden": "Nascondi nel calendario",
@@ -18,7 +18,7 @@
             },
             "detail": {
                 "title": "Raccolta Differenziata - Parametri aggiuntivi (2/2)",
-                "description": "Seleziona uno o più giorni di raccolta. Maggiori dettagli qui: https://github.com/bruxy70/Garbage-Collection",
+                "description": "Seleziona uno o più giorni di raccolta. Maggiori dettagli qui: {docs_url}",
                 "data": {
                     "date": "Data (mm/dd)",
                     "entities": "Lista di entità (separate da virgole)",
@@ -31,7 +31,7 @@
                     "weekday_order_number": "Ordine del giorno della settimana nel mese (ad esempio il primo mercoledì del mese)",
                     "force_week_order_numbers": "Ordine della settimana in un mese invece dell'ordine del giorno della settimana (per esempio il mercoledì della prima settimana)",
                     "verbose_format": "Formato Verbale (usare le variabili `date` e `days` (in parentesi graffe))",
-                    "date_format": "Formato Data (vedere http://strftime.org/)"
+                    "date_format": "Formato Data (vedere strftime)"
                 }
             }
         },
@@ -56,7 +56,7 @@
         "step": {
             "init": {
                 "title": "Raccolta Differenziata - Frequenza di raccolta (1/2)",
-                "description": "Cambia i parametri del sensore. Maggiori informazioni su https://github.com/bruxy70/Garbage-Collection",
+                "description": "Cambia i parametri del sensore. Maggiori informazioni su {docs_url}",
                 "data": {
                     "hidden": "Nascondi nel calendario",
                     "frequency": "Frequenza",
@@ -70,7 +70,7 @@
             },
             "detail": {
                 "title": "Raccolta Differenziata - Parametri aggiuntivi (2/2)",
-                "description": "Seleziona uno o più giorni di raccolta. Maggiori dettagli qui: https://github.com/bruxy70/Garbage-Collection",
+                "description": "Seleziona uno o più giorni di raccolta. Maggiori dettagli qui: {docs_url}",
                 "data": {
                     "date": "Data (mm/dd)",
                     "entities": "Lista di entità (separate da virgole)",
@@ -83,7 +83,7 @@
                     "weekday_order_number": "Ordine del giorno della settimana nel mese (ad esempio il primo mercoledì del mese)",
                     "force_week_order_numbers": "Ordine della settimana in un mese invece dell'ordine del giorno della settimana (per esempio il mercoledì della prima settimana)",
                     "verbose_format": "Formato Verbale (usare le variabili `date` e `days` (in parentesi graffe))",
-                    "date_format": "Formato Data (vedere http://strftime.org/)"
+                    "date_format": "Formato Data (vedere strftime)"
                 }
             }
         },

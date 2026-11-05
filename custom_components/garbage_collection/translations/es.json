@@ -3,7 +3,7 @@
         "step": {
             "user": {
                 "title": "Recolección de basura - Frecuencia de recogida (1/2)",
-                "description": "Ingrese el nombre del sensor y configure los parámetros del sensor. Más información en https://github.com/bruxy70/Garbage-Collection",
+                "description": "Ingrese el nombre del sensor y configure los parámetros del sensor. Más información en {docs_url}",
                 "data": {
                     "name": "Nombre amigable",
                     "hidden": "Esconderse en el calendario",
@@ -18,7 +18,7 @@
             },
             "detail": {
                 "title": "Recolección de basura - Parámetros adicionales (2/2)",
-                "description": "Más detalles aquí: https://github.com/bruxy70/Garbage-Collection",
+                "description": "Más detalles aquí: {docs_url}",
                 "data": {
                     "date": "Fecha (mm/dd)",
                     "entities": "Lista de entidades (separadas por comas)",
@@ -31,7 +31,7 @@
                     "weekday_order_number": "Orden del día de la semana en el mes (por ejemplo, primer miércoles del mes)",
                     "force_week_order_numbers": "Orden de la semana en un mes en lugar de orden del día de la semana (por ejemplo, el miércoles de la primera semana)",
                     "verbose_format": "Formato detallado (usando las variables `fecha` y` dias` (entre corchetes))",
-                    "date_format": "Formato de fecha(ver en http://strftime.org/)"
+                    "date_format": "Formato de fecha(ver en strftime)"
                 }
             }
         },
@@ -56,7 +56,7 @@
         "step": {
             "init": {
                 "title": "Recolección de basura - Frecuencia de recogida (1/2)",
-                "description": "Cambiar los parámetros del sensor. Más información en https://github.com/bruxy70/Garbage-Collection",
+                "description": "Cambiar los parámetros del sensor. Más información en {docs_url}",
                 "data": {
                     "hidden": "Esconderse en el calendario",
                     "frequency": "Frequencia",
@@ -70,7 +70,7 @@
             },
             "detail": {
                 "title": "Recolección de basura - Parámetros adicionales (2/2)",
-                "description": "Más detalles aquí: https://github.com/bruxy70/Garbage-Collection",
+                "description": "Más detalles aquí: {docs_url}",
                 "data": {
                     "date": "Fecha (mm/dd)",
                     "entities": "Lista de entidades (separadas por comas)",
@@ -83,7 +83,7 @@
                     "weekday_order_number": "Orden del día de la semana en el mes (por ejemplo, primer miércoles del mes)",
                     "force_week_order_numbers": "Orden de la semana en un mes en lugar de orden del día de la semana (por ejemplo, el miércoles de la primera semana)",
                     "verbose_format": "Formato detallado (usando las variables `fecha` y` dias` (entre corchetes))",
-                    "date_format": "Formato de fecha(ver en http://strftime.org/)"
+                    "date_format": "Formato de fecha(ver en strftime)"
                 }
             }
         },

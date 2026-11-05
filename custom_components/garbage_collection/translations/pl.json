@@ -3,7 +3,7 @@
         "step": {
             "user": {
                 "title": "Wywóz Śmieci - Częstotliwość wywozu (1/2)",
-                "description": "Wprowadź nazwę dla sensora i skonfiguruj jego parametry. Więcej informacji na stronie https://github.com/bruxy70/Garbage-Collection",
+                "description": "Wprowadź nazwę dla sensora i skonfiguruj jego parametry. Więcej informacji na stronie {docs_url}",
                 "data": {
                     "name": "Przyjazna nazwa",
                     "hidden": "Ukryj w kalendarzu",
@@ -18,7 +18,7 @@
             },
             "detail": {
                 "title": "Wywóz Śmieci - (2/2)",
-                "description": "Wybierz jeden lub więcej dni wywozu. Więcej szczegółów tutaj: https://github.com/bruxy70/Garbage-Collection",
+                "description": "Wybierz jeden lub więcej dni wywozu. Więcej szczegółów tutaj: {docs_url}",
                 "data": {
                     "date": "Data (mm/dd)",
                     "entities": "Lista encji (rozdzielane przecinkami)",
@@ -31,7 +31,7 @@
                     "weekday_order_number": "Kolejność dni tygodnia w miesiącu (np. pierwsza środa miesiąca)",
                     "force_week_order_numbers": "Kolejność tygodni w miesiącu zamiast kolejności dni tygodnia (np. w środę pierwszego tygodnia)",
                     "verbose_format": "Format trybu gadatliwego (używa zmiennych `date` oraz `days` (w nawiasach klamerkowych))",
-                    "date_format": "Format daty (patrz http://strftime.org/)"
+                    "date_format": "Format daty (patrz strftime)"
                 }
             }
         },
@@ -56,7 +56,7 @@
         "step": {
             "init": {
                 "title": "Wywóz Śmieci - Częstotliwośc wywozu (1/2)",
-                "description": "Zmień parametry sensora. Więcej informacji tutaj https://github.com/bruxy70/Garbage-Collection",
+                "description": "Zmień parametry sensora. Więcej informacji tutaj {docs_url}",
                 "data": {
                     "hidden": "Ukryj w kalendarzu",
                     "frequency": "Częstotliwość",
@@ -70,7 +70,7 @@
             },
             "detail": {
                 "title": "Wywóz Śmieci - Dodatkowe parametry (2/2)",
-                "description": "Dołączone i wyłączone daty są listą, rozdzielanych przecinkami, dat w formacie rrrr-mm-dd. Więcej informacji tutaj https://github.com/bruxy70/Garbage-Collection",
+                "description": "Dołączone i wyłączone daty są listą, rozdzielanych przecinkami, dat w formacie rrrr-mm-dd. Więcej informacji tutaj {docs_url}",
                 "data": {
                     "date": "Data (mm/dd)",
                     "entities": "Lista encji (rozdzielane przecinkami)",
@@ -83,7 +83,7 @@
                     "weekday_order_number": "Kolejność dni tygodnia w miesiącu (np. pierwsza środa miesiąca)",
                     "force_week_order_numbers": "Kolejność tygodni w miesiącu zamiast kolejności dni tygodnia (np. w środę pierwszego tygodnia)",
                     "verbose_format": "Format trybu gadatliwego (używa zmiennych `date` oraz `days` (w nawiasach klamrowych))",
-                    "date_format": "Format daty (patrz http://strftime.org/)"
+                    "date_format": "Format daty (patrz strftime)"
                 }
             }
         },
