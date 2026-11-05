@@ -128,7 +128,7 @@ class GarbageCollection(RestoreEntity):
         self._last_updated: datetime | None = None
         self.last_collection: datetime | None = None
         self._days: int | None = None
-        self._attr_state = "" if bool(self._verbose_state) else 2
+        self._attr_state: str | int | None = "" if bool(self._verbose_state) else 2
         self._attr_icon = self._icon_normal
 
     async def async_added_to_hass(self) -> None:
