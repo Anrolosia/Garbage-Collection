@@ -1,16 +1,21 @@
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/hacs/integration) [![Garbage-Collection](https://img.shields.io/github/v/release/bruxy70/Garbage-Collection.svg?1)](https://github.com/bruxy70/Garbage-Collection) ![Maintenance](https://img.shields.io/maintenance/yes/2022.svg)
+[![release](https://img.shields.io/github/v/release/Anrolosia/Garbage-Collection)](https://github.com/Anrolosia/Garbage-Collection/releases) ![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2025.8%2B-blue)
 
-## End of Support
-
-Home Assistant has introduced local calendars in 2022, in the 2023.1 release they added an option for different recurent events. With this, most of the functionality of this custom helper is supported natively. So I will end developing and supporting this helper in 2023.
+> [!IMPORTANT]
+> **This is a maintained fork of [bruxy70/Garbage-Collection](https://github.com/bruxy70/Garbage-Collection).** The original author ended support in 2023 (Home Assistant's Local Calendar covers most of these schedules natively) and the repository was removed from the Home Assistant Marketplace catalog. This fork keeps the helper working on current Home Assistant releases. All credit for the integration goes to [@bruxy70](https://github.com/bruxy70).
+>
+> - **Requires Home Assistant 2025.8 or newer.** Tested on 2026.11.
+> - v4.11.0 fixes the Home Assistant 2026.11 startup hang (`Waiting for integrations to complete setup: garbage_collection`, Home Assistant never finishes starting).
+> - Report issues [here](https://github.com/Anrolosia/Garbage-Collection/issues), not on the original repository.
+> - Maintenance is best effort: bug fixes and compatibility with new Home Assistant releases, no new features planned.
 
 ## Table of Contents
 
 - [Description](#garbage-collection)
 - [Installation](#installation)
 
+  - [Installation via the Home Assistant Marketplace](#installation-via-the-home-assistant-marketplace)
+  - [Coming from bruxy70/Garbage-Collection](#coming-from-bruxy70garbage-collection)
   - [Manual Installation](#manual-installation)
-  - [Installation via Home Assistant Community Store (HACS)](#installation-via-home-assistant-community-store-hacs)
 
 - [Configuration](#configuration)
 - [Blueprints for Manual Update](#blueprints-for-manual-update)
@@ -48,20 +53,28 @@ These are some examples using this sensor. The Lovelace config examples are incl
 
 ## Installation
 
-### MANUAL INSTALLATION
+### INSTALLATION VIA THE HOME ASSISTANT MARKETPLACE
 
-1. Download the
-   [latest release](https://github.com/bruxy70/garbage_collection/releases/latest).
-2. Unpack the release and copy the `custom_components/garbage_collection` directory
-   into the `custom_components` directory of your Home Assistant
-   installation.
-3. Restart Home Assistant.
+1. In the Marketplace (HACS before Home Assistant 2026.11), open the menu and select **Custom repositories**.
+2. Add `https://github.com/Anrolosia/Garbage-Collection` with the type **Integration**.
+3. Install "Garbage Collection" and restart Home Assistant.
 4. Configure the `garbage_collection` helper.
 
-### INSTALLATION VIA Home Assistant Community Store (HACS)
+### COMING FROM bruxy70/Garbage-Collection
 
-1. Ensure that [HACS](https://hacs.xyz/) is installed.
-2. Search for and install the "Garbage Collection" integration.
+Your existing helpers, entities and automations carry over: Home Assistant keys them to the `garbage_collection` domain, not to the repository it came from. **Do not delete the helpers or use "Delete and uninstall"**, that erases them.
+
+The Marketplace refuses to install this fork while it still considers the original repository installed ("The garbage_collection directory belongs to bruxy70/Garbage-Collection"), and refuses to uninstall the original while helpers exist ([home-assistant/core#190454](https://github.com/home-assistant/core/issues/190454)). Until that is fixed, either:
+
+- delete `custom_components/garbage_collection` and restart (the Marketplace forgets a repository whose folder is gone at startup, your helpers fail to load for that one start), then install this fork and restart again, or
+- disable the Marketplace integration, back up `.storage/marketplace.repositories`, remove `"installed": true` from the `bruxy70/Garbage-Collection` entry, enable the Marketplace again, then install this fork and restart.
+
+### MANUAL INSTALLATION
+
+1. Download `garbage_collection.zip` from the
+   [latest release](https://github.com/Anrolosia/Garbage-Collection/releases/latest).
+2. Unpack it into `custom_components/garbage_collection` in your Home Assistant
+   configuration directory.
 3. Restart Home Assistant.
 4. Configure the `garbage_collection` helper.
 

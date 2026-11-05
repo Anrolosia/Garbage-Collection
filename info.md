@@ -1,6 +1,6 @@
-[![hacs_badge](https://img.shields.io/badge/HACS-Default-orange.svg)](https://github.com/custom-components/hacs) [![Garbage-Collection](https://img.shields.io/github/v/release/bruxy70/Garbage-Collection.svg?1)](https://github.com/bruxy70/Garbage-Collection) ![Maintenance](https://img.shields.io/maintenance/yes/2022.svg)
+[![release](https://img.shields.io/github/v/release/Anrolosia/Garbage-Collection)](https://github.com/Anrolosia/Garbage-Collection/releases) ![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2025.8%2B-blue)
 
-[![Buy me a coffee](https://img.shields.io/static/v1.svg?label=Buy%20me%20a%20coffee&message=🥨&color=black&logo=buy%20me%20a%20coffee&logoColor=white&labelColor=6f4e37)](https://www.buymeacoffee.com/3nXx0bJDP)
+**Maintained fork of [bruxy70/Garbage-Collection](https://github.com/bruxy70/Garbage-Collection)**, which ended support in 2023 and was removed from the Marketplace catalog. Requires Home Assistant 2025.8 or newer, tested on 2026.11. Report issues on [this fork](https://github.com/Anrolosia/Garbage-Collection/issues). All credit for the integration goes to [@bruxy70](https://github.com/bruxy70) ([buy him a coffee](https://www.buymeacoffee.com/3nXx0bJDP)).
 
 {% if prerelease %}
 
