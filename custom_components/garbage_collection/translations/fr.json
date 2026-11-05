@@ -30,7 +30,7 @@
                     "first_week": "Première semaine de la collecte (1-52)",
                     "first_date": "Première date",
                     "weekday_order_number": "Ordre du jour de la semaine dans le mois (par exemple, premier mercredi du mois)",
-                    "force_week_order_numbers": "Nième occurrence du jour de la semaine dans un mois, au lieu du jour de la semaine dans la Nième semaine de chaque mois. Plus d'info sur {docs_url}#parameters-for-monthly-collection",
+                    "force_week_order_numbers": "Nième occurrence du jour de la semaine dans un mois, au lieu du jour de la semaine dans la Nième semaine de chaque mois.",
                     "verbose_format": "Format état verbeux (utilisation des variables `date` et `days` (entre caractères accolade ))",
                     "date_format": "Format de date (voir strftime)"
                 }
@@ -83,7 +83,7 @@
                     "first_week": "Première semaine de la collecte (1-52)",
                     "first_date": "Première date",
                     "weekday_order_number": "Ordre du jour de la semaine dans le mois (par exemple, premier mercredi du mois)",
-                    "force_week_order_numbers": "Nième occurrence du jour de la semaine dans un mois, au lieu du jour de la semaine dans la Nième semaine de chaque mois. Plus d'info sur {docs_url}#parameters-for-monthly-collection",
+                    "force_week_order_numbers": "Nième occurrence du jour de la semaine dans un mois, au lieu du jour de la semaine dans la Nième semaine de chaque mois.",
                     "verbose_format": "Format état verbeux (utilisation des variables `date` et `days` (entre caractères accolade ))",
                     "date_format": "Format de date (voir strftime)"
                 }
