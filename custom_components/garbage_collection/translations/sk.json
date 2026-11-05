@@ -3,7 +3,7 @@
         "step": {
             "user": {
                 "title": "Garbage Collection - Nastavenia",
-                "description": "Zadej meno senzoru a nastav parametre. Viac na https://github.com/bruxy70/Garbage-Collection",
+                "description": "Zadej meno senzoru a nastav parametre. Viac na {docs_url}",
                 "data": {
                     "name": "Friendly name",
                     "hidden": "Skryť v kalendári",
@@ -17,7 +17,7 @@
                     "verbose_format": "Verbose format (Použi `date` a `days` premenné (v zložených zátvorkách))",
                     "include_dates": "Pridané dátumy (yyyy-mm-dd, yyyy-mm-dd, ...) - voliteľné",
                     "exclude_dates": "Zakázané dátumy (yyyy-mm-dd, yyyy-mm-dd, ...) - voliteľné",
-                    "date_format": "Formát data(see http://strftime.org/)"
+                    "date_format": "Formát data(see strftime)"
                 }
             },
             "annual_group": {
@@ -30,7 +30,7 @@
             },
             "detail": {
                 "title": "Garbage Collection - Dny svozu",
-                "description": "Vyber jeden alebo viacej dní zvozu. Viac na: https://github.com/bruxy70/Garbage-Collection",
+                "description": "Vyber jeden alebo viacej dní zvozu. Viac na: {docs_url}",
                 "data": {
                     "collection_days_mon": "Pondelok",
                     "collection_days_tue": "Útorok",
@@ -44,7 +44,7 @@
             },
             "final": {
                 "title": "Garbage Collection - Ďalšie parametre",
-                "description": "Pridané a zakázané dátumy sú zoznamy dátumov vo formáte yyyy-mm-dd, oddelených čiarkou. Viac info na https://github.com/bruxy70/Garbage-Collection",
+                "description": "Pridané a zakázané dátumy sú zoznamy dátumov vo formáte yyyy-mm-dd, oddelených čiarkou. Viac info na {docs_url}",
                 "data": {
                     "first_month": "Prvý mesiac zvozu",
                     "last_month": "Posledný mesiac zvozu",
@@ -93,7 +93,7 @@
         "step": {
             "init": {
                 "title": "Garbage Collection - Nastavenia",
-                "description": "Zadaj meno senzora a nastav parametre. Viac na https://github.com/bruxy70/Garbage-Collection",
+                "description": "Zadaj meno senzora a nastav parametre. Viac na {docs_url}",
                 "data": {
                     "hidden": "Skryť v kalendári",
                     "frequency": "Frekvencia",
@@ -106,7 +106,7 @@
                     "verbose_format": "Verbose format (Použi `date` a `days` premenné (v zložených zátvorkách))",
                     "include_dates": "Pridané dátumy (yyyy-mm-dd, yyyy-mm-dd, ...) - voliteľné",
                     "exclude_dates": "Zakázané dátumy (yyyy-mm-dd, yyyy-mm-dd, ...) - voliteľné",
-                    "date_format": "Formát dátumu(see http://strftime.org/)"
+                    "date_format": "Formát dátumu(see strftime)"
                 }
             },
             "annual_group": {
@@ -119,7 +119,7 @@
             },
             "detail": {
                 "title": "Garbage Collection - Dni zvozu",
-                "description": "Vyber jeden alebo viac dní zvozu. Více na: https://github.com/bruxy70/Garbage-Collection",
+                "description": "Vyber jeden alebo viac dní zvozu. Více na: {docs_url}",
                 "data": {
                     "collection_days_mon": "Pondelok",
                     "collection_days_tue": "Útorok",
@@ -134,7 +134,7 @@
             },
             "final": {
                 "title": "Garbage Collection - Ďalšie parametre",
-                "description": "Pridané a zakázané dátumy sú zoznamy dátumov vo formáte yyyy-mm-dd, oddelených čiarkou. Viac info na https://github.com/bruxy70/Garbage-Collection",
+                "description": "Pridané a zakázané dátumy sú zoznamy dátumov vo formáte yyyy-mm-dd, oddelených čiarkou. Viac info na {docs_url}",
                 "data": {
                     "first_month": "Prvý mesiac zvozu",
                     "last_month": "Posledný mesiac zvozu",

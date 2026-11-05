@@ -3,7 +3,7 @@
         "step": {
             "user": {
                 "title": "Garbage Collection - Fréquence de la collecte (1/2)",
-                "description": "Définir le nom du capteur et configurer les paramètres du capteur. Plus d'info sur https://github.com/bruxy70/Garbage-Collection",
+                "description": "Définir le nom du capteur et configurer les paramètres du capteur. Plus d'info sur {docs_url}",
                 "data": {
                     "name": "Friendly name",
                     "hidden": "Masquer dans le calendrier",
@@ -19,7 +19,7 @@
             },
             "detail": {
                 "title": "Garbage Collection - Paramètres additionnels (2/2)",
-                "description": "Choisir un ou plusieurs jours de collecte. Plus de détail ici: https://github.com/bruxy70/Garbage-Collection",
+                "description": "Choisir un ou plusieurs jours de collecte. Plus de détail ici: {docs_url}",
                 "data": {
                     "date": "Date (mm/dd)",
                     "entities": "Liste des entités (séparées par une virgule)",
@@ -30,9 +30,9 @@
                     "first_week": "Première semaine de la collecte (1-52)",
                     "first_date": "Première date",
                     "weekday_order_number": "Ordre du jour de la semaine dans le mois (par exemple, premier mercredi du mois)",
-                    "force_week_order_numbers": "Nième occurrence du jour de la semaine dans un mois, au lieu du jour de la semaine dans la Nième semaine de chaque mois. Plus d'info sur https://github.com/bruxy70/Garbage-Collection#parameters-for-monthly-collection",
+                    "force_week_order_numbers": "Nième occurrence du jour de la semaine dans un mois, au lieu du jour de la semaine dans la Nième semaine de chaque mois. Plus d'info sur {docs_url}#parameters-for-monthly-collection",
                     "verbose_format": "Format état verbeux (utilisation des variables `date` et `days` (entre caractères accolade ))",
-                    "date_format": "Format de date (voir http://strftime.org/)"
+                    "date_format": "Format de date (voir strftime)"
                 }
             }
         },
@@ -57,7 +57,7 @@
         "step": {
             "init": {
                 "title": "Garbage Collection - Fréquence de la collecte (1/2)",
-                "description": "Modifier les paramètres des capteurs. Plus d'infos sur https://github.com/bruxy70/Garbage-Collection",
+                "description": "Modifier les paramètres des capteurs. Plus d'infos sur {docs_url}",
                 "data": {
                     "hidden": "Masquer dans le calendrier",
                     "frequency": "Fréquence",
@@ -72,7 +72,7 @@
             },
             "detail": {
                 "title": "Garbage Collection - Paramètres additionnels (2/2)",
-                "description": "Choisir un ou plusieurs jours de collecte. Plus de détail ici: https://github.com/bruxy70/Garbage-Collection",
+                "description": "Choisir un ou plusieurs jours de collecte. Plus de détail ici: {docs_url}",
                 "data": {
                     "date": "Date (mm/dd)",
                     "entities": "Liste des entités (séparées par une virgule)",
@@ -83,9 +83,9 @@
                     "first_week": "Première semaine de la collecte (1-52)",
                     "first_date": "Première date",
                     "weekday_order_number": "Ordre du jour de la semaine dans le mois (par exemple, premier mercredi du mois)",
-                    "force_week_order_numbers": "Nième occurrence du jour de la semaine dans un mois, au lieu du jour de la semaine dans la Nième semaine de chaque mois. Plus d'info sur https://github.com/bruxy70/Garbage-Collection#parameters-for-monthly-collection",
+                    "force_week_order_numbers": "Nième occurrence du jour de la semaine dans un mois, au lieu du jour de la semaine dans la Nième semaine de chaque mois. Plus d'info sur {docs_url}#parameters-for-monthly-collection",
                     "verbose_format": "Format état verbeux (utilisation des variables `date` et `days` (entre caractères accolade ))",
-                    "date_format": "Format de date (voir http://strftime.org/)"
+                    "date_format": "Format de date (voir strftime)"
                 }
             }
         },

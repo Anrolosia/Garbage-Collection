@@ -1,4 +1,5 @@
 """Setup, reload and shared calendar ownership (HA 2026.11 setup lock)."""
+
 import asyncio
 
 from homeassistant import config_entries

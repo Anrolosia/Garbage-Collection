@@ -3,7 +3,7 @@
         "step": {
             "user": {
                 "title": "Garbage Collection - Konfigurace (1/2)",
-                "description": "Zadej jméno sensoru a nastav parametry. Více na https://github.com/bruxy70/Garbage-Collection",
+                "description": "Zadej jméno sensoru a nastav parametry. Více na {docs_url}",
                 "data": {
                     "name": "Friendly name",
                     "hidden": "Skrýt v kalendáři",
@@ -18,7 +18,7 @@
             },
             "detail": {
                 "title": "Garbage Collection - Další parametry (2/2)",
-                "description": "Více na: https://github.com/bruxy70/Garbage-Collection",
+                "description": "Více na: {docs_url}",
                 "data": {
                     "date": "Datum (mm/dd)",
                     "entities": "Seznam entit (odděleno čárkou)",
@@ -31,7 +31,7 @@
                     "weekday_order_number": "Pořadí dne v měsící (např. první středa v měsíci)",
                     "force_week_order_numbers": "Číslo týdne v měsící místo čísla dne",
                     "verbose_format": "Verbose format (Použij `date` a `days` proměnné (ve složených závorkách))",
-                    "date_format": "Formát data(see http://strftime.org/)"
+                    "date_format": "Formát data(see strftime)"
                 }
             }
         },
@@ -56,7 +56,7 @@
         "step": {
             "init": {
                 "title": "Garbage Collection - Konfigurace (1/2)",
-                "description": "Zadej jméno sensoru a nastav parametry. Více na https://github.com/bruxy70/Garbage-Collection",
+                "description": "Zadej jméno sensoru a nastav parametry. Více na {docs_url}",
                 "data": {
                     "hidden": "Skrýt v kalendáři",
                     "frequency": "Frekvence",
@@ -83,7 +83,7 @@
                     "weekday_order_number": "Pořadí dne v měsící (např. první středa v měsíci)",
                     "force_week_order_numbers": "Číslo týdne v měsící místo čísla dne",
                     "verbose_format": "Verbose format (Použij `date` a `days` proměnné (ve složených závorkách))",
-                    "date_format": "Formát data(see http://strftime.org/)"
+                    "date_format": "Formát data(see strftime)"
                 }
             }
         },

@@ -3,7 +3,7 @@
         "step": {
             "user": {
                 "title": "Coleta de lixo - Frequência de coleta (1/2)",
-                "description": "Insira o nome do sensor e configure os parâmetros do sensor. Mais informações em https://github.com/bruxy70/Garbage-Collection",
+                "description": "Insira o nome do sensor e configure os parâmetros do sensor. Mais informações em {docs_url}",
                 "data": {
                     "name": "Nome fantasia",
                     "hidden": "Ocultar no calendário",
@@ -18,7 +18,7 @@
             },
             "detail": {
                 "title": "Coleta de lixo - Parâmetros adicionais (2/2)",
-                "description": "Mais detalhes aqui: https://github.com/bruxy70/Garbage-Collection",
+                "description": "Mais detalhes aqui: {docs_url}",
                 "data": {
                     "date": "Data (mm/dd)",
                     "entities": "Lista de entidades (separadas por vírgulas)",
@@ -31,7 +31,7 @@
                     "weekday_order_number": "Ordem do dia da semana no mês (por exemplo, primeira quarta-feira do mês)",
                     "force_week_order_numbers": "Ordem da semana em um mês em vez da ordem do dia da semana (por exemplo, na quarta-feira da primeira semana)",
                     "verbose_format": "Formato detalhado (usando variáveis ​​`date` e `days` (entre colchetes))",
-                    "date_format": "Formato de data (consulte http://strftime.org/)"
+                    "date_format": "Formato de data (consulte strftime)"
                 }
             }
         },
@@ -56,7 +56,7 @@
         "step": {
             "init": {
                 "title": "Coleta de lixo - Frequência de coleta (1/2)",
-                "description": "Altere os parâmetros do sensor. Mais informações em https://github.com/bruxy70/Garbage-Collection",
+                "description": "Altere os parâmetros do sensor. Mais informações em {docs_url}",
                 "data": {
                     "hidden": "Ocultar no calendário",
                     "frequency": "Frequência",
@@ -70,7 +70,7 @@
             },
             "detail": {
                 "title": "Coleta de lixo - Parâmetros adicionais (2/2)",
-                "description": "Mais detalhes aqui: https://github.com/bruxy70/Garbage-Collection",
+                "description": "Mais detalhes aqui: {docs_url}",
                 "data": {
                     "date": "Data (mm/dd)",
                     "entities": "Lista de entidades (separadas por vírgulas)",
@@ -83,7 +83,7 @@
                     "weekday_order_number": "Ordem do dia da semana no mês (por exemplo, primeira quarta-feira do mês)",
                     "force_week_order_numbers": "Ordem da semana em um mês em vez da ordem do dia da semana (por exemplo, na quarta-feira da primeira semana)",
                     "verbose_format": "Formato detalhado (usando variáveis ​​`date` e `days` (entre colchetes))",
-                    "date_format": "Formato de data (consulte http://strftime.org/)"
+                    "date_format": "Formato de data (consulte strftime)"
                 }
             }
         },
