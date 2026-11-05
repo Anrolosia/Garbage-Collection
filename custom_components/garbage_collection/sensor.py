@@ -21,7 +21,6 @@ from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.restore_state import RestoreEntity
 
 from . import const, helpers
-from .calendar import EntitiesCalendarData
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -166,17 +165,8 @@ class GarbageCollection(RestoreEntity):
             manufacturer="bruxy70",
         )
 
-        # Create or add to calendar
+        # Add to calendar (created and forwarded in async_setup_entry)
         if not self.hidden:
-            if const.CALENDAR_PLATFORM not in self.hass.data[const.DOMAIN]:
-                self.hass.data[const.DOMAIN][
-                    const.CALENDAR_PLATFORM
-                ] = EntitiesCalendarData(self.hass)
-                _LOGGER.debug("Creating garbage_collection calendar")
-                await self.hass.config_entries.async_forward_entry_setup(
-                    self.config_entry, const.CALENDAR_PLATFORM
-                )
-
             self.hass.data[const.DOMAIN][const.CALENDAR_PLATFORM].add_entity(
                 self.entity_id
             )

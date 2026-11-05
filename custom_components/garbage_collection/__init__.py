@@ -4,7 +4,6 @@ from __future__ import annotations
 import asyncio
 import logging
 from datetime import timedelta
-from types import MappingProxyType
 from typing import Any, Dict
 
 import homeassistant.helpers.config_validation as cv
@@ -17,6 +16,9 @@ from homeassistant.core import HomeAssistant, ServiceCall
 from homeassistant.helpers.typing import ConfigType
 
 from . import const, helpers
+from .calendar import EntitiesCalendarData
+
+CALENDAR_OWNER = "calendar_owner"
 
 MIN_TIME_BETWEEN_UPDATES = timedelta(seconds=30)
 
@@ -224,30 +226,38 @@ async def async_setup_entry(hass: HomeAssistant, config_entry: ConfigEntry) -> b
         config_entry.title,
         config_entry.options[const.CONF_FREQUENCY],
     )
-    config_entry.add_update_listener(update_listener)
-    # Add sensor
-    hass.async_create_task(
-        hass.config_entries.async_forward_entry_setup(
-            config_entry, const.SENSOR_PLATFORM
-        )
-    )
+    config_entry.async_on_unload(config_entry.add_update_listener(update_listener))
+    domain_data = hass.data[const.DOMAIN]
+    domain_data.setdefault(const.CALENDAR_PLATFORM, EntitiesCalendarData(hass))
+    platforms = [const.SENSOR_PLATFORM]
+    # All entries share one calendar entity, set up by the first visible entry.
+    # ponytail: if the owner entry is deleted, the calendar comes back on the
+    # next restart (or reload of another entry), not immediately.
+    if (
+        not config_entry.options.get(ATTR_HIDDEN, False)
+        and domain_data.get(CALENDAR_OWNER) is None
+    ):
+        domain_data[CALENDAR_OWNER] = config_entry.entry_id
+        platforms.append(const.CALENDAR_PLATFORM)
+    config_entry.runtime_data = platforms
+    # Must be awaited: since HA 2026.11 a forward started after setup takes the
+    # entry setup lock, and a nested forward from an entity then deadlocks.
+    await hass.config_entries.async_forward_entry_setups(config_entry, platforms)
     return True
 
 
-async def async_remove_entry(hass: HomeAssistant, config_entry: ConfigEntry) -> None:
-    """Handle removal of an entry."""
-    try:
-        await hass.config_entries.async_forward_entry_unload(
-            config_entry, const.SENSOR_PLATFORM
-        )
-        _LOGGER.info(
-            "Successfully removed sensor from the garbage_collection integration"
-        )
-    except ValueError:
-        pass
+async def async_unload_entry(hass: HomeAssistant, config_entry: ConfigEntry) -> bool:
+    """Unload the platforms set up by this entry."""
+    if not await hass.config_entries.async_unload_platforms(
+        config_entry, config_entry.runtime_data
+    ):
+        return False
+    if hass.data[const.DOMAIN].get(CALENDAR_OWNER) == config_entry.entry_id:
+        hass.data[const.DOMAIN][CALENDAR_OWNER] = None
+    return True
 
 
-async def async_migrate_entry(_: HomeAssistant, config_entry: ConfigEntry) -> bool:
+async def async_migrate_entry(hass: HomeAssistant, config_entry: ConfigEntry) -> bool:
     """Migrate old entry."""
     _LOGGER.info(
         "Migrating %s from version %s", config_entry.title, config_entry.version
@@ -341,9 +351,12 @@ async def async_migrate_entry(_: HomeAssistant, config_entry: ConfigEntry) -> bo
             new_options[const.CONF_EXPIRE_AFTER] = (
                 new_options[const.CONF_EXPIRE_AFTER] + ":00"
             )
-    config_entry.version = const.CONFIG_VERSION
-    config_entry.data = MappingProxyType({**new_data})
-    config_entry.options = MappingProxyType({**new_options})
+    hass.config_entries.async_update_entry(
+        config_entry,
+        data=new_data,
+        options=new_options,
+        version=const.CONFIG_VERSION,
+    )
     if removed_data:
         _LOGGER.error(
             "Removed data config %s. "
@@ -366,7 +379,4 @@ async def async_migrate_entry(_: HomeAssistant, config_entry: ConfigEntry) -> bo
 
 async def update_listener(hass: HomeAssistant, entry: ConfigEntry) -> None:
     """Update listener - to re-create device after options update."""
-    await hass.config_entries.async_forward_entry_unload(entry, const.SENSOR_PLATFORM)
-    hass.async_add_job(
-        hass.config_entries.async_forward_entry_setup(entry, const.SENSOR_PLATFORM)
-    )
+    await hass.config_entries.async_reload(entry.entry_id)
